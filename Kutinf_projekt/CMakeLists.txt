@@ -18,10 +18,10 @@ target_compile_options(${PROJECT_NAME} PRIVATE $<$<OR:$<CXX_COMPILER_ID:GNU>,$<C
 # documentation
 include(cmake/UseLATEX.cmake)
 
-add_latex_document(doc/latex_template.tex
-                   CONFIGURE doc/latex_template.tex
+add_latex_document(doc/document.tex
+                   CONFIGURE doc/document.tex
                    TARGET_NAME doc
-                   INPUTS doc/nyilatkozat.tex doc/abeld.bst
+                   INPUTS doc/abeld.bst
                    BIBFILES doc/references.bib
                    IMAGE_DIRS img
-                   DEPENDS doc/latex_template.tex)
+                   DEPENDS doc/document.tex)
